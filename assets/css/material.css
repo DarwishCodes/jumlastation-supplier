@@ -3,7 +3,14 @@
 }
 
 .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
-  color: #34a34c;
+  color: #929497;
+}
+
+.mdc-select__menu {
+  width: 100%;
+}
+.mdc-list-item {
+  padding: 10px 20px;
 }
 
 .main-content {
@@ -99,6 +106,16 @@ body {
   }
 }
 
+[data-layout="vertical"][data-sidebar="dark"] .navbar-nav .nav-sm .nav-link {
+  color: #495057;
+}
+
+[data-layout="vertical"][data-sidebar="dark"]
+  .navbar-nav
+  .nav-sm
+  .nav-link:hover {
+  color: #495057;
+}
 [data-layout="vertical"][data-sidebar="dark"][data-sidebar-size="sm"]
   .navbar-menu
   .navbar-nav
@@ -109,7 +126,7 @@ body {
 }
 
 .simplebar-content {
-  padding: 10px !important;
+  padding: 5px !important;
 }
 
 .navbar-menu {
@@ -199,6 +216,33 @@ body {
   background-color: #ffffff;
 }
 
+.bg-pattern {
+  background: #ffffff;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #32475c1f;
+}
+
+.badge-soft-light {
+  color: #00b2ff;
+}
+
+.dropdown-tabs {
+  background-color: #00b2ff1f;
+  padding: 1px 1px;
+  border-radius: 4px;
+}
+
+.dropdown-item {
+  padding: 10px 10px;
+}
+.notification-item {
+  border-bottom: 1px solid #32475c1f;
+}
+
+.notification-top {
+  border-bottom: 1px solid #32475c1f;
+}
+
 @media (min-width: 768px) {
   [data-layout="vertical"][data-sidebar-size="sm-hover"] #page-topbar,
   [data-layout="vertical"][data-sidebar-size="sm"] #page-topbar {
@@ -206,7 +250,46 @@ body {
   }
 }
 
+@media (min-width: 600px) {
+  .dropdown-menu-lg {
+    width: 400px;
+  }
+}
+
+.welcome-1 {
+  display: none;
+}
+
+.topbar-user .dropdown-menu {
+  min-width: 200px;
+}
+
+@media (max-width: 767.98px) {
+  [data-layout="vertical"] .welcome {
+    display: none;
+  }
+
+  .topnav-hamburger {
+    margin-left: 0;
+  }
+
+  .welcome-1 {
+    display: block;
+  }
+}
+
+.user-name-text {
+  display: block !important;
+}
+
+.user-name-sub-text {
+  display: block !important;
+}
+
 /* Main */
+.vertical-overlay {
+  z-index: 9999;
+}
 .main-content {
   background-color: #f7f9fa;
 }
@@ -240,9 +323,6 @@ body {
 }
 .mdc-select {
   margin: 10px 0;
-}
-.page-content {
-  padding: calc(105px + 1.5rem) calc(1.5rem * 0.5) 60px calc(1.5rem * 0.5);
 }
 
 .custom-badge {
