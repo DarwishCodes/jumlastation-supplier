@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-topbar="light"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-sidebar-image="none"
+  data-preloader="disable"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard | JumlaStation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/Logo.svg" />
+
+    <!-- jsvectormap css -->
+    <link
+      href="assets/libs/jsvectormap/css/jsvectormap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--Swiper slider css-->
+    <link
+      href="assets/libs/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+    <script
+      src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"
+      defer
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="assets/css/material.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="row gy-0 gx-0">
+        <div class="col-lg-6">
+          <div class="banner">
+            <div class="banner__box">
+              <div class="banner__stars">
+                <img src="assets/images/start-filled.svg" alt="" />
+                <img src="assets/images/start-filled.svg" alt="" />
+                <img src="assets/images/start-filled.svg" alt="" />
+                <img src="assets/images/start-filled.svg" alt="" />
+                <img src="assets/images/start.svg" alt="" />
+              </div>
+              <h3 class="banner__text">
+                Great job, Lorem ipsum dolor sit amet, consectet adipiscing
+                elit, sed do eiusmod .
+              </h3>
+              <p class="banner__name">Joe Christensen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <section class="section-auth">
+            <div class="sign">
+              <div class="text-center mb-4">
+                <h1 class="fw-bold">Let’s Log In</h1>
+              </div>
+              <label
+                class="mdc-text-field mdc-text-field--outlined mdc-email mb-2"
+              >
+                <span class="mdc-notched-outline">
+                  <span class="mdc-notched-outline__leading"></span>
+                  <span class="mdc-notched-outline__notch">
+                    <span class="mdc-floating-label">Email or Mobile No.</span>
+                  </span>
+                  <span class="mdc-notched-outline__trailing"></span>
+                </span>
+                <input type="text" class="mdc-text-field__input" />
+              </label>
+              <p class="text-muted mb-4">Email address cannot be changes</p>
+              <label
+                class="mdc-text-field mdc-text-field--outlined mdc-password"
+              >
+                <span class="mdc-notched-outline">
+                  <span class="mdc-notched-outline__leading"></span>
+                  <span class="mdc-notched-outline__notch">
+                    <span class="mdc-floating-label">Password</span>
+                  </span>
+                  <span class="mdc-notched-outline__trailing"></span>
+                </span>
+
+                <input type="text" class="mdc-text-field__input" />
+                <span class="material-symbols-outlined mdc-text-field__icon">
+                  visibility
+                </span>
+                <!-- <span class="material-symbols-outlined mdc-text-field__icon">
+                    visibility_off
+                  </span> -->
+              </label>
+              <div class="forget mb-4">
+                <a class="forget-link fs-12" href="#">Forgot your password?</a>
+              </div>
+              <div class="mdc-touch-target-wrapper">
+                <button
+                  class="mdc-button mdc-button--raised mdc-button--full-width"
+                >
+                  <span class="mdc-button__ripple"></span>
+                  <span class="mdc-button__label">LOG IN</span>
+                </button>
+              </div>
+              <div class="mt-3">
+                <p class="text-muted fs-16">
+                  Don’t have an account? <a href="#">Register</a>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const textField = new mdc.textField.MDCTextField(
+        document.querySelector(".mdc-email")
+      );
+      const password = new mdc.textField.MDCTextField(
+        document.querySelector(".mdc-password")
+      );
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = [].map.call(
+        document.querySelectorAll(".mdc-button"),
+        function (el) {
+          return new mdc.ripple.MDCRipple(el);
+        }
+      );
+    });
+  </script>
+</html>
