@@ -538,7 +538,7 @@ body {
 .multi-step__step-box {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 362px;
   margin: 30px auto;
   position: relative;
 }
@@ -553,23 +553,40 @@ body {
   display: block;
   position: absolute;
   top: 31%;
-  left: 117%;
-  width: 47%;
+  left: 73px;
+  max-width: calc(100% - 20px);
+  width: 424px;
   height: 3px;
   border-radius: 30px;
   z-index: -1;
   background-color: #34a34c10;
 }
+
 @media (max-width: 768px) {
   .multi-step__step-box::after {
     top: 22%;
     left: 10%;
     width: 84%;
   }
+
+  .multi-step {
+    padding: 10px;
+  }
+  .section-multi-step {
+    padding: 0;
+  }
 }
-@media (max-width: 1400px) {
+@media (max-width: 397px) {
   .multi-step__step-box {
-    width: 100%;
+    width: 280px;
+  }
+
+  .multi-step__step-text {
+    font-size: 5px;
+  }
+
+  .multi-step__step:not(:last-child) ::after {
+    left: 67px;
   }
 }
 .multi-step__step-number {
@@ -591,19 +608,19 @@ body {
 }
 @media (max-width: 768px) {
   .multi-step__step-number {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 18px;
+    height: 18px;
     font-size: 1.3rem;
   }
 }
 .multi-step__step-text {
   color: #9bb0b3;
-  font-size: 12px;
+  font-size: 10px;
   margin-top: 1.5rem;
 }
 @media (max-width: 768px) {
   .multi-step__step-text {
-    font-size: 0.8rem;
+    font-size: 8px;
   }
 }
 .multi-step__step {
