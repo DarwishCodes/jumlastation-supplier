@@ -408,6 +408,14 @@ body {
   background-color: #f7f9fa;
 }
 
+.select2-container {
+  min-width: 100% !important; /* Adjust the value as needed */
+}
+
+.select2-container--outlined .select2-selection {
+  border: 1px solid #c5c5c58a;
+}
+
 /*******************/
 /**  Register     **/
 /*******************/

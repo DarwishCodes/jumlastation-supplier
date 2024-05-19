@@ -60,6 +60,11 @@
     ></script>
 
     <link
+      href="https://cdn.jsdelivr.net/gh/djibe/material@4.6.2-1.0/css/material-plugins.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
@@ -951,240 +956,49 @@
                   <!--end row-->
 
                   <div class="filters">
-                    <div class="row">
+                    <div class="row g-3">
                       <div class="mb-2">
                         <h3>Filters</h3>
                       </div>
                       <div class="col-lg-3">
-                        <div
-                          class="mdc-select mdc-select--outlined mdc-select--1"
-                        >
-                          <div
-                            class="mdc-select__anchor"
-                            aria-labelledby="outlined-select-label"
+                        <div class="select-box">
+                          <select
+                            class="form-control js-example-outlined-single-1"
+                            name="fruit"
+                            aria-placeholder=""
                           >
-                            <span class="mdc-notched-outline">
-                              <span class="mdc-notched-outline__leading"></span>
-                              <span class="mdc-notched-outline__notch">
-                                <span
-                                  id="outlined-select-label"
-                                  class="mdc-floating-label"
-                                  >Select Year</span
-                                >
-                              </span>
-                              <span
-                                class="mdc-notched-outline__trailing"
-                              ></span>
-                            </span>
-                            <span class="mdc-select__selected-text-container">
-                              <span class="mdc-select__selected-text"></span>
-                            </span>
-                            <span class="mdc-select__dropdown-icon">
-                              <svg
-                                class="mdc-select__dropdown-icon-graphic"
-                                viewBox="7 10 10 5"
-                              >
-                                <polygon
-                                  class="mdc-select__dropdown-icon-inactive"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 10 12 15 17 10"
-                                ></polygon>
-                                <polygon
-                                  class="mdc-select__dropdown-icon-active"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 15 12 10 17 15"
-                                ></polygon>
-                              </svg>
-                            </span>
-                          </div>
-
-                          <div
-                            class="mdc-select__menu mdc-menu mdc-menu-surface"
-                          >
-                            <ul class="mdc-list" role="listbox">
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="apple"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Apple</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="banana"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Banana</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="cherry"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Cherry</span>
-                              </li>
-                            </ul>
-                          </div>
+                            <option></option>
+                            <option value="apple">Apple</option>
+                            <option value="orange">Orange</option>
+                            <option value="banana">Banana</option>
+                          </select>
                         </div>
                       </div>
                       <div class="col-lg-3">
-                        <div
-                          class="mdc-select mdc-select--outlined mdc-select--2"
-                        >
-                          <div
-                            class="mdc-select__anchor"
-                            aria-labelledby="outlined-select-label"
+                        <div class="select-box">
+                          <select
+                            class="form-control js-example-outlined-single-2"
+                            name="fruit"
                           >
-                            <span class="mdc-notched-outline">
-                              <span class="mdc-notched-outline__leading"></span>
-                              <span class="mdc-notched-outline__notch">
-                                <span
-                                  id="outlined-select-label"
-                                  class="mdc-floating-label"
-                                  >Select Month</span
-                                >
-                              </span>
-                              <span
-                                class="mdc-notched-outline__trailing"
-                              ></span>
-                            </span>
-                            <span class="mdc-select__selected-text-container">
-                              <span class="mdc-select__selected-text"></span>
-                            </span>
-                            <span class="mdc-select__dropdown-icon">
-                              <svg
-                                class="mdc-select__dropdown-icon-graphic"
-                                viewBox="7 10 10 5"
-                              >
-                                <polygon
-                                  class="mdc-select__dropdown-icon-inactive"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 10 12 15 17 10"
-                                ></polygon>
-                                <polygon
-                                  class="mdc-select__dropdown-icon-active"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 15 12 10 17 15"
-                                ></polygon>
-                              </svg>
-                            </span>
-                          </div>
-
-                          <div
-                            class="mdc-select__menu mdc-menu mdc-menu-surface"
-                          >
-                            <ul class="mdc-list" role="listbox">
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="apple"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Apple</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="banana"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Banana</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="cherry"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Cherry</span>
-                              </li>
-                            </ul>
-                          </div>
+                            <option></option>
+                            <option value="apple">Apple</option>
+                            <option value="orange">Orange</option>
+                            <option value="banana">Banana</option>
+                          </select>
                         </div>
                       </div>
 
                       <div class="col-lg-3">
-                        <div
-                          class="mdc-select mdc-select--outlined mdc-select--3"
-                        >
-                          <div
-                            class="mdc-select__anchor"
-                            aria-labelledby="outlined-select-label"
+                        <div class="select-box">
+                          <select
+                            class="form-control js-example-outlined-single-3"
+                            name="fruit"
                           >
-                            <span class="mdc-notched-outline">
-                              <span class="mdc-notched-outline__leading"></span>
-                              <span class="mdc-notched-outline__notch">
-                                <span
-                                  id="outlined-select-label"
-                                  class="mdc-floating-label"
-                                  >Select City</span
-                                >
-                              </span>
-                              <span
-                                class="mdc-notched-outline__trailing"
-                              ></span>
-                            </span>
-                            <span class="mdc-select__selected-text-container">
-                              <span class="mdc-select__selected-text"></span>
-                            </span>
-                            <span class="mdc-select__dropdown-icon">
-                              <svg
-                                class="mdc-select__dropdown-icon-graphic"
-                                viewBox="7 10 10 5"
-                              >
-                                <polygon
-                                  class="mdc-select__dropdown-icon-inactive"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 10 12 15 17 10"
-                                ></polygon>
-                                <polygon
-                                  class="mdc-select__dropdown-icon-active"
-                                  stroke="none"
-                                  fill-rule="evenodd"
-                                  points="7 15 12 10 17 15"
-                                ></polygon>
-                              </svg>
-                            </span>
-                          </div>
-
-                          <div
-                            class="mdc-select__menu mdc-menu mdc-menu-surface"
-                          >
-                            <ul class="mdc-list" role="listbox">
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="apple"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Apple</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="banana"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Banana</span>
-                              </li>
-                              <li
-                                class="mdc-list-item"
-                                role="option"
-                                data-value="cherry"
-                              >
-                                <span class="mdc-list-item__ripple"></span>
-                                <span class="mdc-list-item__text">Cherry</span>
-                              </li>
-                            </ul>
-                          </div>
+                            <option></option>
+                            <option value="apple">Apple</option>
+                            <option value="orange">Orange</option>
+                            <option value="banana">Banana</option>
+                          </select>
                         </div>
                       </div>
                       <div class="col-lg-3">
@@ -2983,6 +2797,34 @@
             return new mdc.ripple.MDCRipple(el);
           }
         );
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(function () {
+        $(".js-example-outlined-single-1").select2({
+          theme: "outlined",
+          placeholder: "Select Year",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-2").select2({
+          theme: "outlined",
+          placeholder: "Select Month",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-3").select2({
+          theme: "outlined",
+          placeholder: "Select City",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
       });
     </script>
   </body>
