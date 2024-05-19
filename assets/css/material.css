@@ -411,11 +411,25 @@ body {
 .select2-container {
   min-width: 100% !important; /* Adjust the value as needed */
 }
-
+/* 
 .select2-container--outlined .select2-selection {
   border: 1px solid #c5c5c58a;
-}
+} */
 
+/* .mdc-text-field {
+  border: 1px solid #c5c5c58a;
+} */
+
+.select2-container--outlined.select2-container--open .select2-selection {
+  border-color: #34a34c;
+  box-shadow: inset 2px 2px 0 -1px #34a34c, inset -2px -2px 0 -1px #34a34c;
+}
+.select2-container.select2-container--open .select2-selection__arrow {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='5' viewBox='7 10 10 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%34a34c' fill-rule='evenodd' d='m7 10 5 5 5-5z'/%3E%3C/svg%3E")
+    no-repeat 50%;
+  -webkit-transform: rotate(180deg) translateY(-5px);
+  transform: rotate(180deg) translateY(-5px);
+}
 /*******************/
 /**  Register     **/
 /*******************/
@@ -484,11 +498,28 @@ body {
   height: 100vh;
 }
 
+.section-auth--bg {
+  background-image: url(../images/forget-password.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .sign {
   display: flex;
   flex-direction: column;
   max-width: calc(100% - 20px);
   width: 424px;
+  background-color: #ffffff;
+}
+
+.sign--card {
+  box-shadow: 0px 4px 9px 1px #32475c0a;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.sign--large {
+  width: 577px;
 }
 
 .mdc-button--full-width {
