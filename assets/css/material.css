@@ -947,6 +947,43 @@ body {
 .drag-drop__text {
 }
 
+.pagination-wrap {
+  margin-right: 50px;
+}
+
+.pagination-wrap a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listjs-pagination li .page {
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.listjs-pagination li.active .page {
+  color: #34a34c;
+  font-weight: 600;
+  background-color: #4cb74846;
+}
+.pagination-next {
+  border: none;
+  color: #32475c;
+}
+
+.pagination-prev {
+  border: none;
+  color: #32475c;
+}
+
+.page-row {
+  margin-right: 15px;
+  flex: 1;
+  select {
+    border: none;
+  }
+}
+
 @media (max-width: 768px) {
   .input {
     width: 25px;

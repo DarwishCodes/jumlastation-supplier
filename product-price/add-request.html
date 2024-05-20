@@ -1657,17 +1657,30 @@
                         </div>
                       </div>
 
-                      <div class="d-flex justify-content-end">
+                      <div
+                        class="d-flex justify-content-end align-items-center flex-wrap"
+                      >
+                        <div class="page-row">
+                          <span>Rows per page:</span>
+                          <select name="pagination-select" id="1">
+                            <option value="1">10</option>
+                          </select>
+                        </div>
+                        <p class="m-0">1-5 of 13</p>
                         <div class="pagination-wrap hstack gap-2">
                           <a
                             class="page-item pagination-prev disabled"
                             href="#"
                           >
-                            Previous
+                            <i class="material-symbols-outlined">
+                              chevron_left
+                            </i>
                           </a>
                           <ul class="pagination listjs-pagination mb-0"></ul>
                           <a class="page-item pagination-next" href="#">
-                            Next
+                            <i class="material-symbols-outlined">
+                              chevron_right
+                            </i>
                           </a>
                         </div>
                       </div>
