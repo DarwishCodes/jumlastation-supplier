@@ -929,6 +929,24 @@ body {
   }
 }
 
+.drag-drop {
+  border: 1px dashed #e5e5e7;
+  padding: 24px;
+  text-align: center;
+}
+
+.drag-drop__title {
+  span {
+    color: #0a77ff;
+  }
+}
+
+.drag-drop__icon {
+}
+
+.drag-drop__text {
+}
+
 @media (max-width: 768px) {
   .input {
     width: 25px;
