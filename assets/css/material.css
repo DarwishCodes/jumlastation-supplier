@@ -919,6 +919,16 @@ body {
   background-color: #f6f6f6;
 }
 
+.mdc-button--outlined {
+  .mdc-button__label {
+    color: #8592a3;
+  }
+
+  i {
+    color: #8592a3;
+  }
+}
+
 @media (max-width: 768px) {
   .input {
     width: 25px;
