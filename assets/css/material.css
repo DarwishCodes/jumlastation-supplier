@@ -3,6 +3,7 @@
   --mdc-typography-subtitle1-font-family: "Poppins", sans-serif !important;
   --mdc-typography-font-family: "Poppins", sans-serif !important;
   --mdc-checkbox-checked-color: #34a34c;
+  --mdc-switch-selected-track-color: #34a34c4b;
 }
 
 /* .mdc-button--raised {
@@ -28,6 +29,18 @@
   .mdc-select {
     width: 100%;
   }
+}
+
+.mdc-switch:enabled:hover:not(:active):not(:focus) .mdc-switch__track::after {
+  background: #34a34c73;
+}
+
+.mdc-switch:enabled:active .mdc-switch__track::after {
+  background: #34a34c73;
+}
+
+.mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after {
+  background: #34a34c73;
 }
 
 .nav-bar--elevate {
@@ -570,7 +583,41 @@ body {
   padding: 5px 8px;
   border-radius: 4px;
 }
+
+.mdc-switch--selected .mdc-switch__track,
+.mdc-switch--selected .mdc-switch__handle {
+  background-color: #34a34c; /* Primary color for selected state */
+}
+
+.mdc-switch--selected .mdc-switch__icon--on {
+  fill: #34a34c; /* Primary color for selected state */
+}
+
+.mdc-switch__track {
+  background-color: #bdbdbd; /* Default track color */
+}
+
+.mdc-switch__handle {
+  background-color: white; /* Default handle color */
+}
+
+.nav-pills .nav-link {
+  text-transform: uppercase;
+  color: #32475c99;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .nav-pills {
+    flex-direction: row !important;
+  }
+}
+
+.role-table {
+}
+
 /* 
+
 
 .select2-container--outlined .select2-selection {
   border: 1px solid #c5c5c58a;
@@ -658,6 +705,10 @@ body {
   height: 100vh;
 }
 
+.section-auth--grey {
+  background-color: #f7f9fa;
+}
+
 .section-auth--bg {
   background-image: url(../images/forget-password.png);
   background-repeat: no-repeat;
@@ -671,7 +722,9 @@ body {
   width: 424px;
   background-color: #ffffff;
 }
-
+.sign--grey {
+  background-color: #f7f9fa;
+}
 .sign--card {
   box-shadow: 0px 4px 9px 1px #32475c0a;
   border-radius: 8px;

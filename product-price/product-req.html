@@ -1100,7 +1100,7 @@
                             class="d-flex justify-content-between align-items-center flex-wrap"
                           >
                             <div class="mdc-menu-surface--anchor">
-                              <button
+                              <a
                                 class="mdc-button mdc-button--outlined"
                                 id="menu-button"
                               >
@@ -1108,7 +1108,7 @@
                                   ios_share
                                 </i>
                                 <span class="mdc-button__label">EXPORT</span>
-                              </button>
+                              </a>
                               <div class="mdc-menu mdc-menu-surface" id="menu">
                                 <ul
                                   class="mdc-deprecated-list"
@@ -3470,6 +3470,15 @@
         var picker = new Pikaday({
           field: document.getElementById("datepicker2"),
           format: "MM/DD/YYYY",
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuElement = document.querySelector("#menu");
+        const menu = new mdc.menu.MDCMenu(menuElement);
+        const button = document.querySelector("#menu-button");
+
+        button.addEventListener("click", () => {
+          menu.open = !menu.open;
         });
       });
     </script>
