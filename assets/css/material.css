@@ -1,9 +1,10 @@
 * {
   --mdc-theme-primary: #34a34c;
-  --mdc-typography-subtitle1-font-family: "Poppins", sans-serif !important;
-  --mdc-typography-font-family: "Poppins", sans-serif !important;
+  --mdc-typography-subtitle1-font-family: "Tajawal", sans-serif !important;
+  --mdc-typography-font-family: "Tajawal", sans-serif !important;
   --mdc-checkbox-checked-color: #34a34c;
   --mdc-switch-selected-track-color: #34a34c4b;
+  font-family: "Tajawal", sans-serif !important;
 }
 
 /* .mdc-button--raised {
@@ -607,6 +608,27 @@ body {
   font-size: 14px;
 }
 
+/* .mdc-text-field.mdc-text-field--outlined .mdc-notched-outline__leading,
+.mdc-text-field.mdc-text-field--outlined .mdc-notched-outline__trailing {
+  border-color: #d0d5dd; 
+}
+
+.mdc-notched-outline__notch {
+  border-color: #d0d5dd !important; 
+} */
+/* Change the outline color for the text field when it is focused */
+/* .mdc-text-field.mdc-text-field--outlined.mdc-text-field--focused
+  .mdc-notched-outline__leading,
+.mdc-text-field.mdc-text-field--outlined.mdc-text-field--focused
+  .mdc-notched-outline__trailing {
+  border-color: #00ff00; 
+} */
+
+/* .mdc-text-field.mdc-text-field--outlined.mdc-text-field--focused
+  .mdc-notched-outline__notch {
+  border-color: #00ff00; 
+} */
+
 @media (max-width: 992px) {
   .nav-pills {
     flex-direction: row !important;
@@ -616,6 +638,56 @@ body {
 .role-table {
 }
 
+.send-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.send-email__icon {
+  background-color: #4cb74814;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 0 20px #4cb74871;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 555px;
+  i {
+    color: #34a34c;
+  }
+}
+
+.email-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-item__detiails {
+  display: flex;
+}
+
+.email-item__image {
+  margin-right: 10px;
+  img {
+    display: block;
+  }
+}
+
+.email-item__text {
+  display: flex;
+  flex-direction: column;
+
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    font-size: 14;
+    font-weight: 400;
+  }
+}
 /* 
 
 
@@ -737,6 +809,15 @@ body {
 
 .mdc-button--full-width {
   width: 100%;
+}
+
+.mdc-button {
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  i {
+    margin-right: 10px;
+  }
 }
 
 .forget {
@@ -1031,7 +1112,7 @@ body {
 
 .page-row {
   margin-right: 15px;
-  flex: 1;
+  /* flex: 1; */
   select {
     border: none;
   }
@@ -1055,7 +1136,12 @@ body {
   pointer-events: all;
 }
 
-.customerList {
+@media (min-width: 992px) {
+  .customerList {
+    form {
+      flex-direction: column;
+    }
+  }
 }
 
 .select2-container--open {

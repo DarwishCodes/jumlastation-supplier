@@ -66,6 +66,13 @@
       type="text/css"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
@@ -92,6 +99,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link href="../assets/css/material.css" rel="stylesheet" type="text/css" />
+    <!-- <link
+      href="../assets/css/material-rtl.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
   </head>
 
   <body>
@@ -728,7 +740,7 @@
                     <li class="nav-item">
                       <a
                         href="product-price/product-req.html"
-                        class="nav-link"
+                        class="nav-link active"
                         data-key="t-product-price-product-req"
                       >
                         Products requests
@@ -737,7 +749,7 @@
                     <li class="nav-item">
                       <a
                         href="product-price/product-inv.html"
-                        class="nav-link active"
+                        class="nav-link"
                         data-key="t-product-price-product-inv"
                       >
                         Products inventory
@@ -969,11 +981,8 @@
           <div class="container-fluid">
             <!-- start page title -->
             <div class="filters">
-              <div class="row g-3">
-                <div class="mb-2">
-                  <h3>Filters</h3>
-                </div>
-                <div class="col-lg-3">
+              <div class="row mb-3">
+                <div class="col-lg-2">
                   <div class="select-box">
                     <select
                       class="form-control js-example-outlined-single-1"
@@ -987,21 +996,63 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
+                  <div class="select-box">
+                    <select
+                      class="form-control js-example-outlined-single-2"
+                      name="fruit"
+                    >
+                      <option></option>
+                      <option value="apple">Apple</option>
+                      <option value="orange">Orange</option>
+                      <option value="banana">Banana</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-2">
+                  <div class="select-box">
+                    <select
+                      class="form-control js-example-outlined-single-3"
+                      name="fruit"
+                    >
+                      <option></option>
+                      <option value="apple">Apple</option>
+                      <option value="orange">Orange</option>
+                      <option value="banana">Banana</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="select-box">
+                    <select
+                      class="form-control js-example-outlined-single-4"
+                      name="fruit"
+                      aria-placeholder=""
+                    >
+                      <option></option>
+                      <option value="apple">Apple</option>
+                      <option value="orange">Orange</option>
+                      <option value="banana">Banana</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-2">
                   <div class="select-box">
                     <label
-                      class="mdc-text-field mdc-text-field--outlined mdc-3 mb-3"
+                      class="mdc-text-field mdc-text-field--outlined mdc-5 mb-3"
                     >
                       <span class="mdc-notched-outline">
                         <span class="mdc-notched-outline__leading"></span>
                         <span class="mdc-notched-outline__notch">
-                          <span class="mdc-floating-label">Date from</span>
+                          <span class="mdc-floating-label">Order Date</span>
                         </span>
                         <span class="mdc-notched-outline__trailing"></span>
                       </span>
                       <input
                         type="text"
-                        placeholder="Date from"
+                        placeholder="Order Date"
                         class="mdc-text-field__input"
                         id="datepicker"
                       />
@@ -1009,29 +1060,8 @@
                   </div>
                 </div>
 
-                <div class="col-lg-3">
-                  <div class="select-box">
-                    <label
-                      class="mdc-text-field mdc-text-field--outlined mdc-4 mb-3"
-                    >
-                      <span class="mdc-notched-outline">
-                        <span class="mdc-notched-outline__leading"></span>
-                        <span class="mdc-notched-outline__notch">
-                          <span class="mdc-floating-label">Date to</span>
-                        </span>
-                        <span class="mdc-notched-outline__trailing"></span>
-                      </span>
-                      <input
-                        type="text"
-                        placeholder="Date to"
-                        class="mdc-text-field__input"
-                        id="datepicker2"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="filters__buttons">
+                <div class="col-lg-2">
+                  <div class="filters__buttons justify-content-end">
                     <div class="mdc-touch-target-wrapper">
                       <button class="mdc-button mdc-button--touch">
                         <i
@@ -1042,20 +1072,7 @@
                         </i>
 
                         <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">FILTER</span>
-                      </button>
-                    </div>
-                    <div class="mdc-touch-target-wrapper">
-                      <button class="mdc-button mdc-button--touch">
-                        <i
-                          aria-hidden="true"
-                          class="material-symbols-outlined mdc-button__icon"
-                          style="color: #32475cde"
-                        >
-                          close
-                        </i>
-
-                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">GENERATE REPORT</span>
                       </button>
                     </div>
                   </div>
@@ -1096,9 +1113,19 @@
                     <div id="customerList">
                       <div>
                         <div>
-                          <div
+                          <form
                             class="d-flex justify-content-between align-items-center flex-wrap"
                           >
+                            <!-- <button
+                              class="mdc-button mdc-button--outlined mdc-button--outlined-primary mx-2 my-1"
+                            >
+                              <i class="material-symbols-outlined mx-2">
+                                ios_share
+                              </i>
+
+                              <span class="mdc-button__ripple"></span>
+                              <span class="mdc-button__label"></span>
+                            </button> -->
                             <div class="mdc-menu-surface--anchor">
                               <a
                                 class="mdc-button mdc-button--outlined"
@@ -1167,7 +1194,7 @@
 
                             <div class="d-flex align-items-center">
                               <label
-                                class="mdc-text-field mdc-text-field--outlined mdc-first-name mx-2 my-1"
+                                class="mdc-text-field mdc-text-field--outlined mdc-table-search mx-2 my-1"
                               >
                                 <span class="mdc-notched-outline">
                                   <span
@@ -1184,23 +1211,25 @@
                                 </span>
                                 <input
                                   type="text"
-                                  placeholder="Enter your first name"
+                                  placeholder="Search"
                                   class="mdc-text-field__input"
                                 />
                               </label>
-                              <button
+                              <a
                                 style="width: 80%"
                                 class="mdc-button mdc-button--raised mdc-button--primary mx-2 my-1"
-                                data-bs-target="#showModalAdd"
+                                data-bs-target="#showModalEdit"
                                 data-bs-toggle="modal"
                               >
                                 <i class="material-symbols-outlined"> add </i>
 
                                 <span class="mdc-button__ripple"></span>
-                                <span class="mdc-button__label">ADD</span>
-                              </button>
+                                <span class="mdc-button__label"
+                                  >SEND TO EMAIL</span
+                                >
+                              </a>
                             </div>
-                          </div>
+                          </form>
                         </div>
                       </div>
 
@@ -1223,15 +1252,15 @@
                               </th>
 
                               <th>index</th>
-                              <th>Division</th>
-                              <th>Category</th>
-                              <th>Sub Category</th>
+                              <th>Date</th>
+                              <th>Time</th>
+                              <th>City</th>
                               <!-- <th>Status</th> -->
-                              <th>Name</th>
-                              <th>available quantity</th>
+                              <th>Neighborhood</th>
+                              <th>Retailer Name</th>
 
-                              <th>Unit Price</th>
-                              <th>Action</th>
+                              <th>Payment Type</th>
+                              <th>Total sales amount</th>
 
                               <!-- <th class="sort" data-sort="action">Action</th> -->
                             </tr>
@@ -1317,17 +1346,7 @@
                                                             <form>
                                                         </td> -->
 
-                              <td>
-                                <div class="remove">
-                                  <button class="mdc-button">
-                                    <span
-                                      class="material-symbols-outlined text-muted"
-                                    >
-                                      edit
-                                    </span>
-                                  </button>
-                                </div>
-                              </td>
+                              <td>Fast Food</td>
                             </tr>
                             <tr>
                               <th scope="row">
@@ -1358,6 +1377,156 @@
                               <td>Fast Food</td>
 
                               <td>Fast Food</td>
+
+                              <!-- <td>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    Product division
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product category
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product sub category
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product description
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+                                                                
+                                                                <div class="col-6">
+                                                                    Product quantity
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+                                                            </div>
+                                                        </td> -->
+                              <!-- <td>
+                                                            <form id="idDiscountSubmit1">
+                                                                <input type="hidden" name="id" value="1">
+                                                                <input type="number" class="form-control bg-light border-light" name="discount" placeholder="Enter discount">
+                                                            <form>
+                                                        </td> -->
+
+                              <td>Fast Food</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="chk_child"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td class="id" style="display: none">
+                                <a
+                                  href="javascript:void(0);"
+                                  class="fw-medium link-primary"
+                                  >#VZ2101</a
+                                >
+                              </td>
+                              <td class="index">1</td>
+                              <!-- <td class="supplier">
+                                                            <a href="supplier-details.html" >Supplier Name</a>
+                                                        </td> -->
+                              <!-- <td>
+                                                            <img src="../assets/images/users/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle acitivity-avatar">
+                                                        </td> -->
+                              <td>Fast Food</td>
+                              <td>Fast Food</td>
+
+                              <td>Fast Food</td>
+
+                              <!-- <td>
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    Product division
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product category
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product sub category
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+
+                                                                <div class="col-6">
+                                                                    Product description
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+                                                                
+                                                                <div class="col-6">
+                                                                    Product quantity
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    .......
+                                                                </div>
+                                                            </div>
+                                                        </td> -->
+                              <!-- <td>
+                                                            <form id="idDiscountSubmit1">
+                                                                <input type="hidden" name="id" value="1">
+                                                                <input type="number" class="form-control bg-light border-light" name="discount" placeholder="Enter discount">
+                                                            <form>
+                                                        </td> -->
+
+                              <td>Fast Food</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="chk_child"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td class="id" style="display: none">
+                                <a
+                                  href="javascript:void(0);"
+                                  class="fw-medium link-primary"
+                                  >#VZ2101</a
+                                >
+                              </td>
+                              <td class="index">1</td>
+                              <!-- <td class="supplier">
+                                                            <a href="supplier-details.html" >Supplier Name</a>
+                                                        </td> -->
+                              <!-- <td>
+                                                            <img src="../assets/images/users/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle acitivity-avatar">
+                                                        </td> -->
 
                               <td>Fast Food</td>
                               <td>Fast Food</td>
@@ -1409,201 +1578,7 @@
                                                             <form>
                                                         </td> -->
 
-                              <td>
-                                <div class="remove">
-                                  <button class="mdc-button">
-                                    <span
-                                      class="material-symbols-outlined text-muted"
-                                    >
-                                      edit
-                                    </span>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="chk_child"
-                                    value="option1"
-                                  />
-                                </div>
-                              </th>
-                              <td class="id" style="display: none">
-                                <a
-                                  href="javascript:void(0);"
-                                  class="fw-medium link-primary"
-                                  >#VZ2101</a
-                                >
-                              </td>
-                              <td class="index">1</td>
-                              <!-- <td class="supplier">
-                                                            <a href="supplier-details.html" >Supplier Name</a>
-                                                        </td> -->
-                              <!-- <td>
-                                                            <img src="../assets/images/users/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle acitivity-avatar">
-                                                        </td> -->
                               <td>Fast Food</td>
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-
-                              <!-- <td>
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    Product division
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product category
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product sub category
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product description
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-                                                                
-                                                                <div class="col-6">
-                                                                    Product quantity
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-                                                            </div>
-                                                        </td> -->
-                              <!-- <td>
-                                                            <form id="idDiscountSubmit1">
-                                                                <input type="hidden" name="id" value="1">
-                                                                <input type="number" class="form-control bg-light border-light" name="discount" placeholder="Enter discount">
-                                                            <form>
-                                                        </td> -->
-
-                              <td>
-                                <div class="remove">
-                                  <button class="mdc-button">
-                                    <span
-                                      class="material-symbols-outlined text-muted"
-                                    >
-                                      edit
-                                    </span>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="chk_child"
-                                    value="option1"
-                                  />
-                                </div>
-                              </th>
-                              <td class="id" style="display: none">
-                                <a
-                                  href="javascript:void(0);"
-                                  class="fw-medium link-primary"
-                                  >#VZ2101</a
-                                >
-                              </td>
-                              <td class="index">1</td>
-                              <!-- <td class="supplier">
-                                                            <a href="supplier-details.html" >Supplier Name</a>
-                                                        </td> -->
-                              <!-- <td>
-                                                            <img src="../assets/images/users/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle acitivity-avatar">
-                                                        </td> -->
-                              <td>Fast Food</td>
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-                              <td>Fast Food</td>
-
-                              <td>Fast Food</td>
-
-                              <!-- <td>
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    Product division
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product category
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product sub category
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-
-                                                                <div class="col-6">
-                                                                    Product description
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-                                                                
-                                                                <div class="col-6">
-                                                                    Product quantity
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    .......
-                                                                </div>
-                                                            </div>
-                                                        </td> -->
-                              <!-- <td>
-                                                            <form id="idDiscountSubmit1">
-                                                                <input type="hidden" name="id" value="1">
-                                                                <input type="number" class="form-control bg-light border-light" name="discount" placeholder="Enter discount">
-                                                            <form>
-                                                        </td> -->
-
-                              <td>
-                                <div class="remove">
-                                  <button class="mdc-button">
-                                    <span
-                                      class="material-symbols-outlined text-muted"
-                                    >
-                                      edit
-                                    </span>
-                                  </button>
-                                </div>
-                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -1765,208 +1740,100 @@
             >
               <div
                 class="modal-dialog modal-dialog-centered"
-                style="max-width: 600px !important"
+                style="max-width: 500px !important"
               >
                 <div class="modal-content p-4">
-                  <h2 class="mb-4">Remove Product</h2>
-                  <h3 class="mb-4">
-                    Are you sure you want to remove this product?
-                  </h3>
-                  <div
-                    class="modal-content__buttons d-flex justify-content-end"
-                  >
-                    <button
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                      id="close-modal"
-                      class="mdc-button mx-2 my-1"
-                    >
-                      <span class="mdc-button__ripple"></span>
-                      <span class="mdc-button__label text-muted">CANCEL</span>
-                    </button>
-                    <button
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                      id="close-modal"
-                      class="mdc-button mx-2 my-1"
-                    >
-                      <span class="mdc-button__ripple"></span>
-                      <span style="color: #ff3e1d" class="mdc-button__label"
-                        >REMOVE</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal fade"
-              id="showModalAdd"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div
-                class="modal-dialog modal-dialog-centered"
-                style="max-width: 600px !important"
-              >
-                <form action="/upload" id="my-dropzone">
-                  <div class="modal-content p-4">
-                    <div class="text-center">
-                      <h2 class="mb-4 text-muted">Add Product</h2>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="select-box">
-                          <label
-                            class="mdc-text-field mdc-text-field--outlined mdc-2 mb-3"
-                          >
-                            <span class="mdc-notched-outline">
-                              <span class="mdc-notched-outline__leading"></span>
-                              <span class="mdc-notched-outline__notch">
-                                <span class="mdc-floating-label"
-                                  >Start Date</span
-                                >
-                              </span>
-                              <span
-                                class="mdc-notched-outline__trailing"
-                              ></span>
-                            </span>
-                            <input
-                              type="text"
-                              placeholder="Start Date"
-                              class="mdc-text-field__input"
-                              id="datepicker3"
-                            />
-                          </label>
-                        </div>
+                  <div class="row">
+                    <div class="send-email">
+                      <div class="send-email__icon mb-3">
+                        <i class="material-symbols-outlined"> person_add </i>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="select-box">
-                          <label
-                            class="mdc-text-field mdc-text-field--outlined mdc-5 mb-3"
-                          >
-                            <span class="mdc-notched-outline">
-                              <span class="mdc-notched-outline__leading"></span>
-                              <span class="mdc-notched-outline__notch">
-                                <span class="mdc-floating-label">End Date</span>
-                              </span>
-                              <span
-                                class="mdc-notched-outline__trailing"
-                              ></span>
-                            </span>
-                            <input
-                              type="text"
-                              placeholder="End Date"
-                              class="mdc-text-field__input"
-                              id="datepicker4"
-                            />
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="drag-drop dropzone dz-clickable">
-                        <span class="material-symbols-outlined drag-drop__icon">
-                          upload
-                        </span>
-                        <h3 class="drag-drop__title">
-                          Drag and Drop or <span>choose your file</span> for
-                          upload
-                        </h3>
-                        <p class="drag-drop__text">docx, xlsx, pdf or svg</p>
-                      </div>
-                    </div>
-                    <input
-                      type="hidden"
-                      name="additionalData"
-                      id="additionalData"
-                      value="someValue"
-                    />
+                      <h4 class="fw-semibold mb-3">Send to Email</h4>
 
-                    <div>
-                      <ul class="list-unstyled mb-0" id="dropzone-preview">
-                        <li class="mt-2" id="dropzone-preview-list">
-                          <div class="border rounded">
-                            <div class="d-flex p-2">
-                              <div class="flex-shrink-0 me-3">
-                                <div class="avatar-sm bg-light rounded">
-                                  <img
-                                    data-dz-thumbnail
-                                    class="img-fluid rounded d-block"
-                                    src="#"
-                                    alt="Product-Image"
-                                  />
-                                </div>
-                              </div>
-                              <div class="flex-grow-1">
-                                <div class="pt-1">
-                                  <h5 class="fs-14 mb-1" data-dz-name>
-                                    &nbsp;
-                                  </h5>
-                                  <p
-                                    class="fs-13 text-muted mb-0"
-                                    data-dz-size
-                                  ></p>
-                                  <strong
-                                    class="error text-danger"
-                                    data-dz-errormessage
-                                  ></strong>
-                                </div>
-                              </div>
-                              <div class="flex-shrink-0 ms-3">
-                                <a data-dz-remove class="mdc-button">
-                                  <span
-                                    class="material-symbols-outlined text-muted"
-                                  >
-                                    delete
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
+                      <div class="email-item my-2">
+                        <div class="email-item__detiails">
+                          <div class="email-item__image">
+                            <img
+                              class="rounded-circle header-profile-user"
+                              src="../assets/images/users/user-dummy-img.jpg"
+                              alt="Header Avatar"
+                            />
                           </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- <div class="file-uploaded">
-                    <div class="file-upload__desc-box">
-                      <div class="file-upload__icon">
-                        <span class="material-symbols-outlined">
-                          description
-                        </span>
+                          <div class="email-item__text">
+                            <h6>Candice Wu</h6>
+                            <p>candice@untitledui.com</p>
+                          </div>
+                        </div>
+                        <a class="mdc-button mdc-button--primary mx-2 my-1">
+                          <span class="mdc-button__ripple"></span>
+                          <span class="mdc-button__label fw-bold text-danger"
+                            >Remove</span
+                          >
+                        </a>
                       </div>
-                      <div class="file-upload__details">
-                        <p class="file0-upload__title">Invovice.pdf</p>
-                        <p class="file0-upload__size"></p>
-                      </div>
-                    </div>
-                  </div> -->
-                    <div
-                      class="modal-content__buttons d-flex justify-content-center mt-4"
-                    >
-                      <a
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                        id="close-modal"
-                        class="mdc-button mx-2 my-1 mdc-button--outlined-primary"
+                      <p class="fs-14 mb-1 fw-semibold">Email address</p>
+                      <label
+                        class="mdc-text-field mdc-text-field--outlined mdc-1 mb-3"
                       >
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label text-muted">CANCEL</span>
-                      </a>
+                        <span class="mdc-notched-outline">
+                          <span class="mdc-notched-outline__leading"></span>
+                          <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label">Email</span>
+                          </span>
+                          <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+
+                        <input
+                          type="text"
+                          placeholder="you@untitledui.com"
+                          class="mdc-text-field__input"
+                        />
+                        <span
+                          class="material-symbols-outlined mdc-text-field__icon"
+                        >
+                          mail
+                        </span>
+                        <!-- <span class="material-symbols-outlined mdc-text-field__icon">
+                            visibility_off
+                          </span> -->
+                      </label>
+                      <div>
+                        <button class="mdc-button mdc-button--touch">
+                          <i class="material-symbols-outlined"> add </i>
+
+                          <span class="mdc-button__ripple"></span>
+                          <span class="mdc-button__label fw-bold"
+                            >Add another</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
                       <button
                         data-bs-dismiss="modal"
                         aria-label="Close"
                         id="close-modal"
-                        class="mdc-button mdc-button--raised mdc-button--primary mx-2 my-1"
+                        class="mdc-button mdc-button--outlined mdc-button--primary mx-2 my-1 mdc-button--full-width"
                       >
                         <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">ADD</span>
+                        <span class="mdc-button__label">CANCEL</span>
+                      </button>
+                    </div>
+                    <div class="col-lg-6">
+                      <button
+                        class="mdc-button mdc-button--raised mdc-button--primary mx-2 my-1 mdc-button--full-width"
+                      >
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">SEND TO EMAIL</span>
                       </button>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+
             <div
               class="modal fade"
               id="showModalShow"
@@ -3477,8 +3344,6 @@
     <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
     <!-- Dashboard init -->
-    <script src="../assets/libs/dropzone/dropzone-min.js"></script>
-
     <script src="../assets/js/pages/dashboard-ecommerce.init.js"></script>
     <script src="../assets/js/pages/dashboard-crm.init.js"></script>
 
@@ -3496,94 +3361,28 @@
 
     <!-- App js -->
     <script src="../assets/js/app.js"></script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var picker = new Pikaday({
-          field: document.getElementById("datepicker"),
-          format: "MM/DD/YYYY",
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = [].map.call(
+          document.querySelectorAll(".mdc-button"),
+          function (el) {
+            return new mdc.ripple.MDCRipple(el);
+          }
+        );
       });
-      document.addEventListener("DOMContentLoaded", function () {
-        var picker = new Pikaday({
-          field: document.getElementById("datepicker2"),
-          format: "MM/DD/YYYY",
-        });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        var picker = new Pikaday({
-          field: document.getElementById("datepicker3"),
-          format: "MM/DD/YYYY",
-        });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        var picker = new Pikaday({
-          field: document.getElementById("datepicker4"),
-          format: "MM/DD/YYYY",
-        });
-      });
-    </script>
-    <script>
-      $(function () {
-        $(".js-example-outlined-single-1").select2({
-          theme: "outlined",
-          placeholder: "Status",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-2").select2({
-          theme: "outlined",
-          placeholder: "Division",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-3").select2({
-          theme: "outlined",
-          placeholder: "Category",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-4").select2({
-          theme: "outlined",
-          placeholder: "Sub Category",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-5").select2({
-          theme: "outlined",
-          placeholder: "Product",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-6").select2({
-          theme: "outlined",
-          placeholder: "Categories",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-7").select2({
-          theme: "outlined",
-          placeholder: "Sub Categories",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-        $(".js-example-outlined-single-8").select2({
-          theme: "outlined",
-          placeholder: "Product",
-          multiple: false,
-          minimumResultsForSearch: Infinity /* Hide search on single select */,
-        });
-      });
-
       document.addEventListener("DOMContentLoaded", () => {
         const textField = new mdc.textField.MDCTextField(
           document.querySelector(".mdc-text-field")
+        );
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const textField = new mdc.textField.MDCTextField(
+          document.querySelector(".mdc-4")
+        );
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const textField = new mdc.textField.MDCTextField(
+          document.querySelector(".mdc-1")
         );
       });
       document.addEventListener("DOMContentLoaded", () => {
@@ -3598,12 +3397,12 @@
       });
       document.addEventListener("DOMContentLoaded", () => {
         const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-4")
+          document.querySelector(".mdc-5")
         );
       });
       document.addEventListener("DOMContentLoaded", () => {
         const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-5")
+          document.querySelector(".mdc-1")
         );
       });
       document.addEventListener("DOMContentLoaded", () => {
@@ -3613,8 +3412,60 @@
       });
       document.addEventListener("DOMContentLoaded", () => {
         const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-cr-expiry")
+          document.querySelector(".mdc-table-search")
         );
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(function () {
+        $(".js-example-outlined-single-1").select2({
+          theme: "outlined",
+          placeholder: "Cities",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-2").select2({
+          theme: "outlined",
+          placeholder: "Neighborhoods",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-3").select2({
+          theme: "outlined",
+          placeholder: "Order Status",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-4").select2({
+          theme: "outlined",
+          placeholder: "Payment Types",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+        $(".js-example-outlined-single-5").select2({
+          theme: "outlined",
+          placeholder: "Cost Range",
+          multiple: false,
+          minimumResultsForSearch: Infinity /* Hide search on single select */,
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var picker = new Pikaday({
+          field: document.getElementById("datepicker"),
+          format: "MM/DD/YYYY",
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var picker = new Pikaday({
+          field: document.getElementById("datepicker2"),
+          format: "MM/DD/YYYY",
+        });
       });
       document.addEventListener("DOMContentLoaded", () => {
         const menuElement = document.querySelector("#menu");
@@ -3625,29 +3476,6 @@
           menu.open = !menu.open;
         });
       });
-    </script>
-    <script>
-      Dropzone.options.myDropzone = {
-        paramName: "file", // The name that will be used to transfer the file
-        maxFilesize: 2, // Maximum file size in MB
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-        init: function () {
-          this.on("sending", function (file, xhr, formData) {
-            // Append the additional data to the formData object
-            var additionalData =
-              document.getElementById("additionalData").value;
-            formData.append("additionalData", additionalData);
-          });
-
-          this.on("success", function (file, response) {
-            console.log("File successfully uploaded:", response);
-          });
-
-          this.on("error", function (file, response) {
-            console.log("Error uploading file:", response);
-          });
-        },
-      };
     </script>
   </body>
 </html>
