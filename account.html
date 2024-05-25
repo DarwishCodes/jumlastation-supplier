@@ -1445,12 +1445,16 @@
                                 name="password"
                                 id="password"
                               />
-                              <span
-                                class="material-symbols-outlined mdc-text-field__icon"
-                                id="togglePassword"
-                              >
-                                visibility_off
-                              </span>
+
+                              <a style="margin-top: 15px" id="togglePassword">
+                                <span
+                                  class="material-symbols-outlined mdc-text-field__icon"
+                                  style="user-select: none"
+                                >
+                                  visibility_off
+                                </span>
+                              </a>
+
                               <!-- <span class="material-symbols-outlined mdc-text-field__icon">
                                   visibility_off
                                 </span> -->
@@ -1480,14 +1484,16 @@
                                 class="mdc-text-field__input"
                                 type="password"
                                 name="password"
-                                id="password"
+                                id="password2"
                               />
-                              <span
-                                class="material-symbols-outlined mdc-text-field__icon"
-                                id="togglePassword"
-                              >
-                                visibility_off
-                              </span>
+                              <a style="margin-top: 15px" id="togglePassword2">
+                                <span
+                                  class="material-symbols-outlined mdc-text-field__icon"
+                                  style="user-select: none"
+                                >
+                                  visibility_off
+                                </span>
+                              </a>
                               <!-- <span class="material-symbols-outlined mdc-text-field__icon">
                                   visibility_off
                                 </span> -->
@@ -1517,14 +1523,16 @@
                                 class="mdc-text-field__input"
                                 type="password"
                                 name="password"
-                                id="password"
+                                id="password3"
                               />
-                              <span
-                                class="material-symbols-outlined mdc-text-field__icon"
-                                id="togglePassword"
-                              >
-                                visibility_off
-                              </span>
+                              <a style="margin-top: 15px" id="togglePassword3">
+                                <span
+                                  class="material-symbols-outlined mdc-text-field__icon"
+                                  style="user-select: none"
+                                >
+                                  visibility_off
+                                </span>
+                              </a>
                               <!-- <span class="material-symbols-outlined mdc-text-field__icon">
                                   visibility_off
                                 </span> -->
@@ -4166,25 +4174,47 @@
       });
     </script>
     <script>
-      const togglePassword = document.querySelector("#togglePassword");
-      const password = document.querySelector("#password");
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const passwordField = document.getElementById("password");
+          const passwordFieldType = passwordField.getAttribute("type");
+          if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility</span>`;
+          } else {
+            passwordField.setAttribute("type", "password");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility_off</span>`;
+          }
+        });
 
-      togglePassword.addEventListener("click", function () {
-        console.log("hello");
-        // toggle the type attribute
-        const type =
-          password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
+      document
+        .getElementById("togglePassword2")
+        .addEventListener("click", function () {
+          const passwordField = document.getElementById("password2");
+          const passwordFieldType = passwordField.getAttribute("type");
+          if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility</span>`;
+          } else {
+            passwordField.setAttribute("type", "password");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility_off</span>`;
+          }
+        });
 
-        // toggle the icon
-        this.classList.toggle("bi-eye");
-      });
-
-      // prevent form submit
-      const form = document.querySelector("form");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-      });
+      document
+        .getElementById("togglePassword3")
+        .addEventListener("click", function () {
+          const passwordField = document.getElementById("password3");
+          const passwordFieldType = passwordField.getAttribute("type");
+          if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility</span>`;
+          } else {
+            passwordField.setAttribute("type", "password");
+            this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility_off</span>`;
+          }
+        });
     </script>
     <script>
       // Toggle edit mode

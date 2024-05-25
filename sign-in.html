@@ -65,7 +65,7 @@
     />
     <link href="assets/css/material.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body class="body--white">
     <div class="main">
       <div class="row gy-0 gx-0">
         <div class="col-lg-6">
@@ -88,7 +88,7 @@
         </div>
         <div class="col-lg-6">
           <section class="section-auth">
-            <div class="sign sign--grey">
+            <div class="sign">
               <div class="text-center mb-4">
                 <h1 class="fw-bold">Let’s Log In</h1>
               </div>
@@ -116,10 +116,19 @@
                   <span class="mdc-notched-outline__trailing"></span>
                 </span>
 
-                <input type="password" class="mdc-text-field__input" />
-                <span class="material-symbols-outlined mdc-text-field__icon">
-                  visibility
-                </span>
+                <input
+                  type="password"
+                  id="password"
+                  class="mdc-text-field__input"
+                />
+                <a style="margin-top: 15px" id="togglePassword">
+                  <span
+                    class="material-symbols-outlined mdc-text-field__icon"
+                    style="user-select: none"
+                  >
+                    visibility_off
+                  </span>
+                </a>
                 <!-- <span class="material-symbols-outlined mdc-text-field__icon">
                     visibility_off
                   </span> -->
@@ -163,5 +172,19 @@
         }
       );
     });
+
+    document
+      .getElementById("togglePassword")
+      .addEventListener("click", function () {
+        const passwordField = document.getElementById("password");
+        const passwordFieldType = passwordField.getAttribute("type");
+        if (passwordFieldType === "password") {
+          passwordField.setAttribute("type", "text");
+          this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility</span>`;
+        } else {
+          passwordField.setAttribute("type", "password");
+          this.innerHTML = `<span class="material-symbols-outlined mdc-text-field__icon" style="user-select: none">visibility_off</span>`;
+        }
+      });
   </script>
 </html>

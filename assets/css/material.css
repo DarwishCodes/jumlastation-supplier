@@ -53,6 +53,10 @@ body {
   background-color: #f7f9fa;
 }
 
+.body--white {
+  background-color: #ffffff;
+}
+
 .navbar-brand-box {
   background-color: #ffffff;
 }
