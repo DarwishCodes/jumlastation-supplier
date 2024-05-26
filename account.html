@@ -4050,65 +4050,13 @@
           }
         );
       });
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-text-field")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-4")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-1")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-2")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-3")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-5")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-1")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-6")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-7")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-8")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-9")
-        );
-      });
-      document.addEventListener("DOMContentLoaded", () => {
-        const textField = new mdc.textField.MDCTextField(
-          document.querySelector(".mdc-table-search")
-        );
+        const textFieldElements = document.querySelectorAll(".mdc-text-field");
+        textFieldElements.forEach((textFieldElement) => {
+          mdc.textField.MDCTextField.attachTo(textFieldElement);
+        });
       });
     </script>
     <script
